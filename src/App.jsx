@@ -1,37 +1,18 @@
 import './App.css';
-import { Navbar, Container, Nav, NavDropdown, button, Carousel, Row, Col, Image, Button, Card, Alert, Accordion, Figure } from 'react-bootstrap';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Container, Carousel, Row, Col, Button, Card, Alert, Accordion } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/shared/Header/Header.component';
+import Footer from './components/shared/Footer/Footer.component';
 const App = () => {
 
   return (
-    <div className="app">
-      <header>
-        <Navbar bg="dark" variant='dark' expand="lg">
-          <Container>
-            <Navbar.Brand href="#home">Jhonatan Hadjez</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <Nav.Link href="#link">LinkExample2</Nav.Link>
-                <Nav.Link href="#link">LinkExanple3</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </header>
+    <BrowserRouter>
+
+      <Header />
+
+
+
 
       <main>
         <Container>
@@ -185,14 +166,9 @@ const App = () => {
           </>
         </Container>
       </main>
-      <footer class="py-5 my-5 bg-dark">
-        <div class="container px-4 px-lg-5">
-          <p class="m-0 text-center text-white">
-            Copyright: Sami Edreai
-          </p>
-        </div>
-      </footer>
-    </div>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
 
